@@ -1,18 +1,4 @@
-﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="newCustomer"
- xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
- xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
- xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
- xmlns:p="http://schemas.uipath.com/workflow/activities/cv"
- xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
- xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
- xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
- xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
- xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
- xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing"
- xmlns:this="clr-namespace:"
- xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV"
- xmlns:ui="http://schemas.uipath.com/workflow/activities"
- xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="newCustomer" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:this="clr-namespace:" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="custCode" Type="InArgument(x:String)" />
     <x:Property Name="message" Type="InArgument(x:String)" />
@@ -26,6 +12,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>742,6929</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>newCustomer_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -75,21 +62,46 @@
       <AssemblyReference>UiPath.CV</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="newCustomer" sap2010:WorkflowViewState.IdRef="Sequence_1">
-    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="300" DisplayName="CV Screen Scope 'IHWindowClass'" sap2010:WorkflowViewState.IdRef="CVScope_1" Server="https://cv.uipath.com/">
+  <Sequence DisplayName="newCustomer" sap:VirtualizedContainerService.HintSize="702,6809" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="300" DisplayName="CV Screen Scope 'IHWindowClass'" sap:VirtualizedContainerService.HintSize="680,838" sap2010:WorkflowViewState.IdRef="CVScope_1" Server="https://cv.uipath.com/">
       <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_2">
-            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(621, 29, 643, 50)]" DesignTarget="[Rectangle.FromLTRB(650, 29, 671, 49)]" DisplayName="CV Click - Button relative to Find CV Element - Icon" sap2010:WorkflowViewState.IdRef="AnchorContextAware_16">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="688,576" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="666,68" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(621, 29, 643, 50)]" DesignTarget="[Rectangle.FromLTRB(650, 29, 671, 49)]" DisplayName="CV Click - Button relative to Find CV Element - Icon" sap:VirtualizedContainerService.HintSize="666,221" sap2010:WorkflowViewState.IdRef="AnchorContextAware_16">
               <ui:AnchorContextAware.AnchorProvider>
                 <ActivityAction x:TypeArguments="ui:Anchor2Data">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:FindCVElement ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" Target="{x:Null}" DesignTimeRectangle="621, 29, 22, 21" DesignTimeScaleFactor="1" DisplayName="Find CV Element - Icon" sap2010:WorkflowViewState.IdRef="FindCVElement_2" InformativeScreenshot="115443bd824a0a053a0a821354085a24" TargetType="Icon" TimeoutMS="30000">
+                  <p:FindCVElement ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" Target="{x:Null}" DesignTimeRectangle="621, 29, 22, 21" DesignTimeScaleFactor="1" DisplayName="Find CV Element - Icon" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="FindCVElement_2" InformativeScreenshot="115443bd824a0a053a0a821354085a24" TargetType="Icon" TimeoutMS="30000">
                     <p:FindCVElement.Image>
                       <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAVCAYAAABCIB6VAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARNSURBVEhLtdR5TJN3HMfx5x+TZX8sMduSLXFHYrZkc0vcnNFlRGc0G27RxLgMZzQeTOdBNg9wRIgGzwkTPBBwFJXDcRbRIoVCoVAssVBsEQql9JajpcpAblze6/MsXTqPZPvDP155/ni+v8/z/V2PMDMzw/MgPHr0iGeZmpri/v0HeNz3cLs99PX18/DhqDTwafWhnho8Pj6BuaOTuiYjGpMbldVPpW2E6q5e6pq70Onv4PMOPjEulDA9PUMon28QVUMzqrt+stomSTJNkND5J4ds0xwzT3L27hiF5lGq9FaMRhOTk1P/Gh8kiC+CBga83FA3k67xEaNwEaP0EtvgJ1Y3SkzzMHG3hoiuHWCvopeEALnOIXU/MTH5T0aQIE5bNDLykNKqJuILOvnunIHNv7XzfY6TbcUu4qr6SWn0sfNaL5GFDjZlWfn2fBubL7QgK2+lq8siZYQSxsbGEbUYO4jPaOKzHUqWRlezIkHD6iQ9iQobLu8IhToP35wz8vVpIyuO32bJz1oWblcREa8lt7RGaiyYJRLEXR4eHiG7RMWn6+W8FZ7HuxHFhO2tJFttlb7e5x1i3elGFsXWsGhPDfN33mTehjLeWV3E2yuvEnO6kh6rTToxQYIYKq7t/pNyXl6QwSufXCRsSwFVt61MTU5L6k0e9pzRsiv5FttOadh0VMWGWKVUN/ujNMK3lKBSa6UGg4ShoT+w2exE7M5h1huJLPjyMtrWHsZGx/EPjeH1j+DsH8bq9tNpH6DV0o++w0NTm5PUPB0vvZ/Ix19ckmYsZgUJ4gUQF/+rrVkIrx1nbeTvePr8km7XIGZbP3e6B6QwjdEdONsuqrU2SXpuPa9+eIr5K2RkFVRIlylIGBz043K6WbNNxgtzjvHimyfYHVcqdS12VdvqpELXhbyqk6KKdvIVJvLKWskpbeFIYjlz5v/C4jUyrpZUIGYFCd4BH/19A+w/nMXs944z6/UEXp53kg178slVGrimtXD0sprwqFyWR+Wz5Icclm2UEbYuPbBsycxdlEL45kya9EbErCBBDBUVlqlYuPIMcz9P4YNVV1i8MY/1B+WklujIVBhYdeg6y+OVLNt3k6VRxSyJLCJs4xVWBuq2H8jA5XJLOUFC770+RHabg8j9F1j7UykRcTeIPFnLjlQt0RfrOFfcyMFMNdHZd9h3yUBU4Lz/mFzP7qTaQGghN25WSxmhBPHPFVTfqGfrARmHM/WcKDKRrLCQXuMmrc7CWVU7F3X3yFB7SFNaOK8wcyitnlOpOVK3oTkiQdy4UOJ53HVERkZ5G2UGH+WWB6gco6jdE38/zUMoWno5camSpLQ8enoCN/OxDJHgcDh5nHi9f02/ytF0Ofk1JjQdPhocgV+nwU1GSQOHU7JRVNRgtzueGBskiGv7LO13O1CqNFzJv44sV07BtSoamwxYu3ueWh9K6LK6eB6Ezm4n/4e52/4f2PkL3F75o09i7isAAAAASUVORK5CYII=" />
                     </p:FindCVElement.Image>
@@ -101,7 +113,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:CVClick DelayBefore="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" Image="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="650, 29, 21, 20" DisplayName="CV Click - Button" sap2010:WorkflowViewState.IdRef="CVClick_9" InformativeScreenshot="db54a97bf5d39ffdf971a1f2921febbe" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="Button" TimeoutMS="30000">
+                  <p:CVClick DelayBefore="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" Image="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="650, 29, 21, 20" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="CVClick_9" InformativeScreenshot="db54a97bf5d39ffdf971a1f2921febbe" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="Button" TimeoutMS="30000">
                     <p:CVClick.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -119,8 +131,8 @@
                 </ActivityAction>
               </ui:AnchorContextAware.TargetProvider>
             </ui:AnchorContextAware>
-            <Delay Duration="00:00:05" sap2010:WorkflowViewState.IdRef="Delay_1" />
-            <p:CVClickText DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="10, 35, 45, 9" DisplayName="CV Click Text - 'Address'" FuzzySearch="True" sap2010:WorkflowViewState.IdRef="CVClickText_1" InformativeScreenshot="f1d7ccfa3abf32ceeeeb32f004c0c79f" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="Text" Text="Address" TimeoutMS="30000">
+            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="666,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <p:CVClickText DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="10, 35, 45, 9" DisplayName="CV Click Text - 'Address'" FuzzySearch="True" sap:VirtualizedContainerService.HintSize="666,129" sap2010:WorkflowViewState.IdRef="CVClickText_1" InformativeScreenshot="f1d7ccfa3abf32ceeeeb32f004c0c79f" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="Text" Text="Address" TimeoutMS="30000">
               <p:CVClickText.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -211,21 +223,26 @@
           <ActivityFunc.Argument>
             <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
           </ActivityFunc.Argument>
-          <ui:MicrosoftOCR FilterRegion="{x:Null}" Text="{x:Null}" ExtractWords="True" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_1" Image="[Image]" Language="en" Profile="Screen" Scale="1" />
+          <ui:MicrosoftOCR FilterRegion="{x:Null}" Text="{x:Null}" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_1" Image="[Image]" Language="en" Profile="Screen" Scale="1" />
         </ActivityFunc>
       </p:CVScope.OCREngine>
       <p:CVScope.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="81be3e3b8c1b827da504b2f6c301d2e9" Selector="&lt;wnd app='rdcman.exe' cls='WindowsForms10.Window.*' title='Windows10 - x86 (ROQAW10x86APP19.deskover.local) - Remote Deskto*' /&gt;&lt;wnd cls='IHWindowClass' idx='5' title='Input Capture Window' /&gt;" WaitForReady="INTERACTIVE" />
       </p:CVScope.Target>
     </p:CVScope>
-    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="300" DisplayName="CV Screen Scope 'IHWindowClass'" sap2010:WorkflowViewState.IdRef="CVScope_2" Server="https://cv.uipath.com/">
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="300" DisplayName="CV Screen Scope 'IHWindowClass'" sap:VirtualizedContainerService.HintSize="680,407" sap2010:WorkflowViewState.IdRef="CVScope_2" Server="https://cv.uipath.com/">
       <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_3">
-            <p:CVClickText DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="20, 66, 86, 9" DisplayName="CV Click Text - 'Customer Menu'" FuzzySearch="True" sap2010:WorkflowViewState.IdRef="CVClickText_2" InformativeScreenshot="3b1efca17dba16727a5a80958b3124ea" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="Text" Text="Customer Menu" TimeoutMS="30000">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,253" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <p:CVClickText DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="20, 66, 86, 9" DisplayName="CV Click Text - 'Customer Menu'" FuzzySearch="True" sap:VirtualizedContainerService.HintSize="400,129" sap2010:WorkflowViewState.IdRef="CVClickText_2" InformativeScreenshot="3b1efca17dba16727a5a80958b3124ea" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="Text" Text="Customer Menu" TimeoutMS="30000">
               <p:CVClickText.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -344,27 +361,32 @@
           <ActivityFunc.Argument>
             <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
           </ActivityFunc.Argument>
-          <ui:MicrosoftOCR FilterRegion="{x:Null}" Text="{x:Null}" ExtractWords="True" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_2" Image="[Image]" Language="en" Profile="Screen" Scale="1" />
+          <ui:MicrosoftOCR FilterRegion="{x:Null}" Text="{x:Null}" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_2" Image="[Image]" Language="en" Profile="Screen" Scale="1" />
         </ActivityFunc>
       </p:CVScope.OCREngine>
       <p:CVScope.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="d6fed765f05d42c0411b6c81b34601cd" Selector="&lt;wnd app='rdcman.exe' cls='WindowsForms10.Window.*' title='Windows10 - x86 (ROQAW10x86APP19.deskover.local) - Remote Deskto*' /&gt;&lt;wnd cls='IHWindowClass' idx='5' title='Input Capture Window' /&gt;" WaitForReady="INTERACTIVE" />
       </p:CVScope.Target>
     </p:CVScope>
-    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="300" DisplayName="CV Screen Scope 'IHWindowClass'" sap2010:WorkflowViewState.IdRef="CVScope_3" Server="https://cv.uipath.com/">
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="300" DisplayName="CV Screen Scope 'IHWindowClass'" sap:VirtualizedContainerService.HintSize="680,499" sap2010:WorkflowViewState.IdRef="CVScope_3" Server="https://cv.uipath.com/">
       <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_4">
-            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(176, 35, 223, 46)]" DesignTarget="[Rectangle.FromLTRB(192, 72, 318, 81)]" DisplayName="CV Click Text - 'Vendor Maintenance' relative to Find CV Text - 'Shipping'" sap2010:WorkflowViewState.IdRef="AnchorContextAware_1">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="688,345" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(176, 35, 223, 46)]" DesignTarget="[Rectangle.FromLTRB(192, 72, 318, 81)]" DisplayName="CV Click Text - 'Vendor Maintenance' relative to Find CV Text - 'Shipping'" sap:VirtualizedContainerService.HintSize="666,221" sap2010:WorkflowViewState.IdRef="AnchorContextAware_1">
               <ui:AnchorContextAware.AnchorProvider>
                 <ActivityAction x:TypeArguments="ui:Anchor2Data">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="176, 35, 47, 11" DisplayName="Find CV Text - 'Shipping'" FuzzySearch="True" sap2010:WorkflowViewState.IdRef="FindCVText_1" InformativeScreenshot="dd79bfd4a63367aed1954fbe6d376cee" TargetType="Text" Text="Shipping" TimeoutMS="30000" />
+                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="176, 35, 47, 11" DisplayName="Find CV Text - 'Shipping'" FuzzySearch="True" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="FindCVText_1" InformativeScreenshot="dd79bfd4a63367aed1954fbe6d376cee" TargetType="Text" Text="Shipping" TimeoutMS="30000" />
                 </ActivityAction>
               </ui:AnchorContextAware.AnchorProvider>
               <ui:AnchorContextAware.TargetProvider>
@@ -372,7 +394,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:CVClickText DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="192, 72, 126, 9" DisplayName="CV Click Text - 'Customer Maintenance'" FuzzySearch="True" sap2010:WorkflowViewState.IdRef="CVClickText_3" InformativeScreenshot="7afcab7ef571cb4f95c35970b12dbb99" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="Text" Text="Customer Maintenance" TimeoutMS="30000">
+                  <p:CVClickText DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="192, 72, 126, 9" DisplayName="CV Click Text - 'Customer Maintenance'" FuzzySearch="True" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="CVClickText_3" InformativeScreenshot="7afcab7ef571cb4f95c35970b12dbb99" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="Text" Text="Customer Maintenance" TimeoutMS="30000">
                     <p:CVClickText.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -516,27 +538,32 @@
           <ActivityFunc.Argument>
             <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
           </ActivityFunc.Argument>
-          <ui:MicrosoftOCR FilterRegion="{x:Null}" Text="{x:Null}" ExtractWords="True" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_3" Image="[Image]" Language="en" Profile="Screen" Scale="1" />
+          <ui:MicrosoftOCR FilterRegion="{x:Null}" Text="{x:Null}" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_3" Image="[Image]" Language="en" Profile="Screen" Scale="1" />
         </ActivityFunc>
       </p:CVScope.OCREngine>
       <p:CVScope.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b20a28564be6757f08f886177cb93eb5" Selector="&lt;wnd app='rdcman.exe' cls='WindowsForms10.Window.*' title='Windows10 - x86 (ROQAW10x86APP19.deskover.local) - Remote Deskto*' /&gt;&lt;wnd cls='IHWindowClass' idx='5' title='Input Capture Window' /&gt;" WaitForReady="INTERACTIVE" />
       </p:CVScope.Target>
     </p:CVScope>
-    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="300" DisplayName="CV Screen Scope 'IHWindowClass'" sap2010:WorkflowViewState.IdRef="CVScope_5" Server="https://cv.uipath.com/">
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="300" DisplayName="CV Screen Scope 'IHWindowClass'" sap:VirtualizedContainerService.HintSize="680,499" sap2010:WorkflowViewState.IdRef="CVScope_5" Server="https://cv.uipath.com/">
       <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_5">
-            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(572, 135, 594, 155)]" DesignTarget="[Rectangle.FromLTRB(606, 133, 656, 158)]" DisplayName="CV Click relative to Find CV Element - Icon" sap2010:WorkflowViewState.IdRef="AnchorContextAware_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="688,345" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(572, 135, 594, 155)]" DesignTarget="[Rectangle.FromLTRB(606, 133, 656, 158)]" DisplayName="CV Click relative to Find CV Element - Icon" sap:VirtualizedContainerService.HintSize="666,221" sap2010:WorkflowViewState.IdRef="AnchorContextAware_2">
               <ui:AnchorContextAware.AnchorProvider>
                 <ActivityAction x:TypeArguments="ui:Anchor2Data">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:FindCVElement ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" Target="{x:Null}" DesignTimeRectangle="572, 135, 22, 20" DesignTimeScaleFactor="1" DisplayName="Find CV Element - Icon" sap2010:WorkflowViewState.IdRef="FindCVElement_1" InformativeScreenshot="f7bc3e795cc37b3b6bd5a60c49c54185" TargetType="Icon" TimeoutMS="30000">
+                  <p:FindCVElement ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" Target="{x:Null}" DesignTimeRectangle="572, 135, 22, 20" DesignTimeScaleFactor="1" DisplayName="Find CV Element - Icon" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="FindCVElement_1" InformativeScreenshot="f7bc3e795cc37b3b6bd5a60c49c54185" TargetType="Icon" TimeoutMS="30000">
                     <p:FindCVElement.Image>
                       <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAUCAYAAACJfM0wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATcSURBVDhPZZXZb1RVHMcvDwafMCiGP0CejEENmyGsUgqCtNAC1Sc0RpFFg4SlILSIQIUg2ICWpQ0EGoMNEMpSIIVQLFAqBUqZaWff7szc2Wc605l2KPrxd6dUijx8cu75Ld/zO/ee37lKX1+W/v6n/5FO99IrtuyTp/Q96ac3+4SMzNOZPrE/oS8r9mx/Dt2n23Kj0J3qIRyN0dLahtIjQkNJp9NkenslMSvBA6Rl3pPOiC9D5tmo0yOxL5DRyeDTAiiJ7hRDSQvJZC/xVD9aMEo8kSAYCpOSRH1HKd2fi0nR3Z2UnCEknyGVK7F4kqGkownOnmlg+TdbmDOviDlz5rKlrJwOYyfdCUmKxElITCLWTSyWIBqNE9GJPScsdiUiQYM4XSrT8/LYuq2ce22tmIwOfI4kZxtuMqlgERU/7MbldPPPU4gEI0RCUcJhnRihyHOCsrgSEKeOJoF5ebOpu3aFXXUX2H75ITWPfFS12Vh5pJaau21s/W4blZUHiYhQwBsgqIUISV5Q8nVyWrJQQPyKTwvLyw5zpPoYO3bupKSqluX1tym9p1HeEWTjX1b2OSIsPXGGw00tTJk2ky6zDVWEfb4gfhHXyekEBvAGIiiqOHWKihdz4UojYyrPMfdKFwtuOClqtlNy10rxnwYKGx8wpqyMij37OFB1FIdXwy3i+gKqTyeIR8cfkjGE4lYlQJg5cxa19ZcZWX2eCdc6WFj/iMUND/lEBAsaHzGh7hbjyn6iqqqG6pqTIhrEJXkuj38A/VkN5HAKisPtR6egcBHnLl3l7f0XmXvbxtpmlQ2tHjY99LDSEGPyFQszyw5Q8ePP/HrgKF41hMutYXd6sbt8A4iOXbcJik0cOt9v3cbe/ZV8ebiBZedvUd7u5pg3yzFzgk9vPmDy2UZ+f9TO/HkLabzejNXpx2pXsdqcOFxe2XUgV6DV4c2hWOwedG63tPHO2Hdpajax4fhpVl+/wSlXnNpmJ8tOnqXi9HXq/6hmxOuj+Oyr1XRYVYwWJ2azNXdMff6w7MCPxebBbPWgmKxuBtmxaw8Tp8zlTpuZljYLJ05f5cz1VjqCKmfqqjl8oYkRXxxndHEZk6bOIBHw8Njswmxzy/lWsYmoSeZdJidKp9nJUPb+doj3x09k/dp1NFy8KB/rIIVLFjP8jTcZWbAOZcUFlDU3eW3+BmZ/vIgHZi8GEbOYbJhMdrq6HBiN9peF2yXA0GnhVO0pNm4opepQFecvX6ZgaQmjJ81DKdiNsrKRYWuaGD5rFVPy82m900S7zS/VuzF22nO8JGywOqUBHFi77FKBTWxWwYLRbGbqjBko45ehFO5m2MrzskADyrTPWbF5C3fcce5b/VKUDaNUrQx+xUEsTl9utNn1uYpFxy5btTnIRH1MzfuIUWOn88qC7ShfX+KVkl8Yl78IgydMl0uTWHnXoqG4VP2gP8cp51PH8Qy7GpZjpOWOlFkSDa4wS4qKePW9YpQZm1Deymf9t6vwSCd6pGncvrB0X1juikBM+vv/xKXfdRJ4gwm0UEJurQT+YBy3FsNtuM/m0lI++HA+W9avJeN+TEh1ofk1fMEYqhZFCUVTvEBEH3sGiKWFjFzcWfk9/U0yJT8AuWs1iXGFMwTjGZI9vSTDAbo9ZqKaT67MpBQW41/FprESKQI37AAAAABJRU5ErkJggg==" />
                     </p:FindCVElement.Image>
@@ -548,7 +575,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:CVClick DelayBefore="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" Image="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="606, 133, 50, 25" DisplayName="CV Click - Button" sap2010:WorkflowViewState.IdRef="CVClick_1" InformativeScreenshot="51abf3a1c72b062b6afab3b805d92370" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="Button" TimeoutMS="30000">
+                  <p:CVClick DelayBefore="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" Image="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="606, 133, 50, 25" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="CVClick_1" InformativeScreenshot="51abf3a1c72b062b6afab3b805d92370" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="Button" TimeoutMS="30000">
                     <p:CVClick.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -734,27 +761,32 @@
           <ActivityFunc.Argument>
             <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
           </ActivityFunc.Argument>
-          <ui:MicrosoftOCR FilterRegion="{x:Null}" Text="{x:Null}" ExtractWords="True" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_5" Image="[Image]" Language="en" Profile="Screen" Scale="1" />
+          <ui:MicrosoftOCR FilterRegion="{x:Null}" Text="{x:Null}" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_5" Image="[Image]" Language="en" Profile="Screen" Scale="1" />
         </ActivityFunc>
       </p:CVScope.OCREngine>
       <p:CVScope.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="d5e68e2a21c73461346a39a5586cfcaf" Selector="&lt;wnd app='rdcman.exe' cls='WindowsForms10.Window.*' title='Windows10 - x86 (ROQAW10x86APP19.deskover.local) - Remote Deskto*' /&gt;&lt;wnd cls='IHWindowClass' idx='5' title='Input Capture Window' /&gt;" WaitForReady="INTERACTIVE" />
       </p:CVScope.Target>
     </p:CVScope>
-    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="300" DisplayName="CV Screen Scope 'IHWindowClass'" sap2010:WorkflowViewState.IdRef="CVScope_4" Server="https://cv.uipath.com/">
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="300" DisplayName="CV Screen Scope 'IHWindowClass'" sap:VirtualizedContainerService.HintSize="680,1674" sap2010:WorkflowViewState.IdRef="CVScope_4" Server="https://cv.uipath.com/">
       <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_6">
-            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(407, 182, 439, 191)]" DesignTarget="[Rectangle.FromLTRB(464, 173, 695, 198)]" DisplayName="CV Type Into - InputBox relative to Find CV Text - 'Name'" sap2010:WorkflowViewState.IdRef="AnchorContextAware_17">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="688,1781" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(407, 182, 439, 191)]" DesignTarget="[Rectangle.FromLTRB(464, 173, 695, 198)]" DisplayName="CV Type Into - InputBox relative to Find CV Text - 'Name'" sap:VirtualizedContainerService.HintSize="666,221" sap2010:WorkflowViewState.IdRef="AnchorContextAware_17">
               <ui:AnchorContextAware.AnchorProvider>
                 <ActivityAction x:TypeArguments="ui:Anchor2Data">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="407, 182, 32, 9" DisplayName="Find CV Text - 'Name'" FuzzySearch="True" sap2010:WorkflowViewState.IdRef="FindCVText_2" InformativeScreenshot="e9f7dafd26220425b4f4a79787f027c4" TargetType="Text" Text="Name" TimeoutMS="30000" />
+                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="407, 182, 32, 9" DisplayName="Find CV Text - 'Name'" FuzzySearch="True" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="FindCVText_2" InformativeScreenshot="e9f7dafd26220425b4f4a79787f027c4" TargetType="Text" Text="Name" TimeoutMS="30000" />
                 </ActivityAction>
               </ui:AnchorContextAware.AnchorProvider>
               <ui:AnchorContextAware.TargetProvider>
@@ -762,7 +794,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:CVTypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" Image="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" Activate="True" ClickBeforeTyping="True" DesignTimeRectangle="464, 173, 231, 25" DisplayName="CV Type Into - InputBox" EmptyField="False" sap2010:WorkflowViewState.IdRef="CVTypeInto_1" InformativeScreenshot="8181e7e26845b93c448118e588742c86" SendWindowMessages="False" SimulateType="False" TargetType="InputBox" Text="123" TimeoutMS="30000">
+                  <p:CVTypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" Image="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" Activate="True" ClickBeforeTyping="True" DesignTimeRectangle="464, 173, 231, 25" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="CVTypeInto_1" InformativeScreenshot="8181e7e26845b93c448118e588742c86" SendWindowMessages="False" SimulateType="False" TargetType="InputBox" Text="123" TimeoutMS="30000">
                     <p:CVTypeInto.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
                     </p:CVTypeInto.Target>
@@ -770,13 +802,13 @@
                 </ActivityAction>
               </ui:AnchorContextAware.TargetProvider>
             </ui:AnchorContextAware>
-            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(1002, 182, 1037, 191)]" DesignTarget="[Rectangle.FromLTRB(1054, 173, 1221, 198)]" DisplayName="CV Type Into - Text relative to Find CV Text - 'LastMod'" sap2010:WorkflowViewState.IdRef="AnchorContextAware_5">
+            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(1002, 182, 1037, 191)]" DesignTarget="[Rectangle.FromLTRB(1054, 173, 1221, 198)]" DisplayName="CV Type Into - Text relative to Find CV Text - 'LastMod'" sap:VirtualizedContainerService.HintSize="666,221" sap2010:WorkflowViewState.IdRef="AnchorContextAware_5">
               <ui:AnchorContextAware.AnchorProvider>
                 <ActivityAction x:TypeArguments="ui:Anchor2Data">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="1002, 182, 35, 9" DisplayName="Find CV Text - 'Market'" FuzzySearch="True" sap2010:WorkflowViewState.IdRef="FindCVText_3" InformativeScreenshot="b9eae4c1e3521ed8e92d128e9654f4da" TargetType="Text" Text="Market" TimeoutMS="30000" />
+                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="1002, 182, 35, 9" DisplayName="Find CV Text - 'Market'" FuzzySearch="True" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="FindCVText_3" InformativeScreenshot="b9eae4c1e3521ed8e92d128e9654f4da" TargetType="Text" Text="Market" TimeoutMS="30000" />
                 </ActivityAction>
               </ui:AnchorContextAware.AnchorProvider>
               <ui:AnchorContextAware.TargetProvider>
@@ -784,7 +816,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:CVTypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" Image="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" Activate="True" ClickBeforeTyping="True" DesignTimeRectangle="1054, 173, 167, 25" DisplayName="CV Type Into - InputBox" EmptyField="False" sap2010:WorkflowViewState.IdRef="CVTypeInto_2" InformativeScreenshot="decac6a8c6b1d133cadcf7a4e58176aa" SendWindowMessages="False" SimulateType="False" TargetType="InputBox" Text="Fish" TimeoutMS="30000">
+                  <p:CVTypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" Image="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" Activate="True" ClickBeforeTyping="True" DesignTimeRectangle="1054, 173, 167, 25" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="CVTypeInto_2" InformativeScreenshot="decac6a8c6b1d133cadcf7a4e58176aa" SendWindowMessages="False" SimulateType="False" TargetType="InputBox" Text="Fish" TimeoutMS="30000">
                     <p:CVTypeInto.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
                     </p:CVTypeInto.Target>
@@ -792,13 +824,13 @@
                 </ActivityAction>
               </ui:AnchorContextAware.TargetProvider>
             </ui:AnchorContextAware>
-            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(421, 324, 440, 335)]" DesignTarget="[Rectangle.FromLTRB(463, 315, 697, 340)]" DisplayName="CV Type Into relative to Find CV Text - 'City'" sap2010:WorkflowViewState.IdRef="AnchorContextAware_6">
+            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(421, 324, 440, 335)]" DesignTarget="[Rectangle.FromLTRB(463, 315, 697, 340)]" DisplayName="CV Type Into relative to Find CV Text - 'City'" sap:VirtualizedContainerService.HintSize="666,221" sap2010:WorkflowViewState.IdRef="AnchorContextAware_6">
               <ui:AnchorContextAware.AnchorProvider>
                 <ActivityAction x:TypeArguments="ui:Anchor2Data">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="421, 324, 19, 11" DisplayName="Find CV Text - 'City'" FuzzySearch="True" sap2010:WorkflowViewState.IdRef="FindCVText_4" InformativeScreenshot="331d6faa2061104f876e5a88001b15d0" TargetType="Text" Text="City" TimeoutMS="30000" />
+                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="421, 324, 19, 11" DisplayName="Find CV Text - 'City'" FuzzySearch="True" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="FindCVText_4" InformativeScreenshot="331d6faa2061104f876e5a88001b15d0" TargetType="Text" Text="City" TimeoutMS="30000" />
                 </ActivityAction>
               </ui:AnchorContextAware.AnchorProvider>
               <ui:AnchorContextAware.TargetProvider>
@@ -806,7 +838,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:CVTypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" Image="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" Activate="True" ClickBeforeTyping="True" DesignTimeRectangle="463, 315, 234, 25" DisplayName="CV Type Into - InputBox" EmptyField="False" sap2010:WorkflowViewState.IdRef="CVTypeInto_3" InformativeScreenshot="05898413be292178f00c2828b35346f9" SendWindowMessages="False" SimulateType="False" TargetType="InputBox" Text="Bucharest" TimeoutMS="30000">
+                  <p:CVTypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" Image="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" Activate="True" ClickBeforeTyping="True" DesignTimeRectangle="463, 315, 234, 25" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="CVTypeInto_3" InformativeScreenshot="05898413be292178f00c2828b35346f9" SendWindowMessages="False" SimulateType="False" TargetType="InputBox" Text="Bucharest" TimeoutMS="30000">
                     <p:CVTypeInto.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
                     </p:CVTypeInto.Target>
@@ -814,13 +846,13 @@
                 </ActivityAction>
               </ui:AnchorContextAware.TargetProvider>
             </ui:AnchorContextAware>
-            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(401, 142, 455, 151)]" DesignTarget="[Rectangle.FromLTRB(465, 133, 560, 158)]" DisplayName="CV Get Text relative to Find CV Text - 'CustCode'" sap2010:WorkflowViewState.IdRef="AnchorContextAware_7">
+            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(401, 142, 455, 151)]" DesignTarget="[Rectangle.FromLTRB(465, 133, 560, 158)]" DisplayName="CV Get Text relative to Find CV Text - 'CustCode'" sap:VirtualizedContainerService.HintSize="666,221" sap2010:WorkflowViewState.IdRef="AnchorContextAware_7">
               <ui:AnchorContextAware.AnchorProvider>
                 <ActivityAction x:TypeArguments="ui:Anchor2Data">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="401, 142, 54, 9" DisplayName="Find CV Text - 'CustCode'" FuzzySearch="True" sap2010:WorkflowViewState.IdRef="FindCVText_5" InformativeScreenshot="49fbde6942136b21cc527098a6cebc08" TargetType="Text" Text="CustCode" TimeoutMS="30000" />
+                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="401, 142, 54, 9" DisplayName="Find CV Text - 'CustCode'" FuzzySearch="True" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="FindCVText_5" InformativeScreenshot="49fbde6942136b21cc527098a6cebc08" TargetType="Text" Text="CustCode" TimeoutMS="30000" />
                 </ActivityAction>
               </ui:AnchorContextAware.AnchorProvider>
               <ui:AnchorContextAware.TargetProvider>
@@ -828,18 +860,18 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:CVGetText Area="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" Target="{x:Null}" DesignTimeRectangle="465, 133, 95, 25" DisplayName="CV Get Text - InputBox" sap2010:WorkflowViewState.IdRef="CVGetText_1" InformativeScreenshot="600ad37540a7ed0e3731400e1869e954" Result="[custCode]" TargetType="InputBox" TimeoutMS="30000" />
+                  <p:CVGetText Area="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" Target="{x:Null}" DesignTimeRectangle="465, 133, 95, 25" DisplayName="CV Get Text - InputBox" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="CVGetText_1" InformativeScreenshot="600ad37540a7ed0e3731400e1869e954" Result="[custCode]" TargetType="InputBox" TimeoutMS="30000" />
                 </ActivityAction>
               </ui:AnchorContextAware.TargetProvider>
             </ui:AnchorContextAware>
-            <ui:LogMessage DisplayName="Log Message" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[custCode]" />
-            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(407, 423, 448, 434)]" DesignTarget="[Rectangle.FromLTRB(465, 414, 699, 438)]" DisplayName="CV Click relative to Find CV Text - 'Country'" sap2010:WorkflowViewState.IdRef="AnchorContextAware_8">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="666,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[custCode]" />
+            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(407, 423, 448, 434)]" DesignTarget="[Rectangle.FromLTRB(465, 414, 699, 438)]" DisplayName="CV Click relative to Find CV Text - 'Country'" sap:VirtualizedContainerService.HintSize="666,221" sap2010:WorkflowViewState.IdRef="AnchorContextAware_8">
               <ui:AnchorContextAware.AnchorProvider>
                 <ActivityAction x:TypeArguments="ui:Anchor2Data">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="407, 423, 41, 11" DisplayName="Find CV Text - 'Country'" FuzzySearch="True" sap2010:WorkflowViewState.IdRef="FindCVText_6" InformativeScreenshot="faa5cbe13efa4bc2b9f03dc952663887" TargetType="Text" Text="Country" TimeoutMS="30000" />
+                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="407, 423, 41, 11" DisplayName="Find CV Text - 'Country'" FuzzySearch="True" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="FindCVText_6" InformativeScreenshot="faa5cbe13efa4bc2b9f03dc952663887" TargetType="Text" Text="Country" TimeoutMS="30000" />
                 </ActivityAction>
               </ui:AnchorContextAware.AnchorProvider>
               <ui:AnchorContextAware.TargetProvider>
@@ -847,7 +879,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:CVClick DelayBefore="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" Image="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="465, 414, 234, 24" DisplayName="CV Click - InputBox" sap2010:WorkflowViewState.IdRef="CVClick_2" InformativeScreenshot="f1e60585eb447ec42611b9ad6b909551" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="InputBox" TimeoutMS="30000">
+                  <p:CVClick DelayBefore="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" Image="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="465, 414, 234, 24" DisplayName="CV Click - InputBox" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="CVClick_2" InformativeScreenshot="f1e60585eb447ec42611b9ad6b909551" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="InputBox" TimeoutMS="30000">
                     <p:CVClick.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -869,7 +901,7 @@
         </ActivityAction>
       </p:CVScope.Body>
       <p:CVScope.DesignTimeCache>
-        <uc:CVCache InformativeScreenshot="ce0ffc4adaff0a1b35438ca02d23026f" OcrText="USER=admin&#xD;&#xA;Address Purchasing IP=localhost&#xD;&#xA;Order Shipping DB:data/bsdb.db VER-4.1.5 D8TYPE=sqlite&#xD;&#xA;Finance Inventory Engineering Quality Custom HR Admin Help DateAdded&#xD;&#xA;Group&#xD;&#xA;Carrier&#xD;&#xA;Price Code&#xD;&#xA;SalesRep&#xD;&#xA;AR Account&#xD;&#xA;CostCenter&#xD;&#xA;Bank&#xD;&#xA;Currency&#xD;&#xA;Label Format&#xD;&#xA;Shp Format LastMod&#xD;&#xA;Market&#xD;&#xA;CreditLimit&#xD;&#xA;Terms&#xD;&#xA;Freight Type&#xD;&#xA;Disc Code&#xD;&#xA;Tax Code&#xD;&#xA;Inv Format N00&#xD;&#xA;PICKUP&#xD;&#xA;C.] On Hold o&#xD;&#xA;Add Activate Windows&#xD;&#xA;Go to Settings to activate Windows.&#xD;&#xA;ENG 12:35 PM&#xD;&#xA;INTL 2/18/2019 x&#xD;&#xA;Main ShipTo Contact&#xD;&#xA;Customer Master Maintenance&#xD;&#xA;CustCode 200027&#xD;&#xA;Name&#xD;&#xA;Line2&#xD;&#xA;Line3&#xD;&#xA;City&#xD;&#xA;State&#xD;&#xA;Zip&#xD;&#xA;Country USA&#xD;&#xA;Remarks USPS&#xD;&#xA;20000000&#xD;&#xA;1300&#xD;&#xA;generic&#xD;&#xA;C.] Create Shipto Same as Bilito" Position="2186, 47" ScaleFactor="1" ScreenshotGuid="69a6965c-d95d-45e9-92e1-de676dec2b39" ServerVersion="1">
+        <uc:CVCache InformativeScreenshot="ce0ffc4adaff0a1b35438ca02d23026f" OcrText="USER=admin&#xA;Address Purchasing IP=localhost&#xA;Order Shipping DB:data/bsdb.db VER-4.1.5 D8TYPE=sqlite&#xA;Finance Inventory Engineering Quality Custom HR Admin Help DateAdded&#xA;Group&#xA;Carrier&#xA;Price Code&#xA;SalesRep&#xA;AR Account&#xA;CostCenter&#xA;Bank&#xA;Currency&#xA;Label Format&#xA;Shp Format LastMod&#xA;Market&#xA;CreditLimit&#xA;Terms&#xA;Freight Type&#xA;Disc Code&#xA;Tax Code&#xA;Inv Format N00&#xA;PICKUP&#xA;C.] On Hold o&#xA;Add Activate Windows&#xA;Go to Settings to activate Windows.&#xA;ENG 12:35 PM&#xA;INTL 2/18/2019 x&#xA;Main ShipTo Contact&#xA;Customer Master Maintenance&#xA;CustCode 200027&#xA;Name&#xA;Line2&#xA;Line3&#xA;City&#xA;State&#xA;Zip&#xA;Country USA&#xA;Remarks USPS&#xA;20000000&#xA;1300&#xA;generic&#xA;C.] Create Shipto Same as Bilito" Position="2186, 47" ScaleFactor="1" ScreenshotGuid="69a6965c-d95d-45e9-92e1-de676dec2b39" ServerVersion="1">
           <uc:CVCache.CvUiElements>
             <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="128">
               <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="1174, 522, 47, 26" Score="1" />
@@ -1066,21 +1098,26 @@
           <ActivityFunc.Argument>
             <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
           </ActivityFunc.Argument>
-          <ui:MicrosoftOCR FilterRegion="{x:Null}" Text="{x:Null}" ExtractWords="True" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_4" Image="[Image]" Language="en" Profile="Screen" Scale="2" />
+          <ui:MicrosoftOCR FilterRegion="{x:Null}" Text="{x:Null}" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_4" Image="[Image]" Language="en" Profile="Screen" Scale="2" />
         </ActivityFunc>
       </p:CVScope.OCREngine>
       <p:CVScope.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="821cb81c6502c8ebcc833eda81b6f4b1" Selector="&lt;wnd app='rdcman.exe' cls='WindowsForms10.Window.*' title='Windows10 - x86 (ROQAW10x86APP19.deskover.local) - Remote Deskto*' /&gt;&lt;wnd cls='IHWindowClass' idx='6' title='Input Capture Window' /&gt;" WaitForReady="INTERACTIVE" />
       </p:CVScope.Target>
     </p:CVScope>
-    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="300" DisplayName="CV Screen Scope 'IHWindowClass'" sap2010:WorkflowViewState.IdRef="CVScope_6" Server="https://cv.uipath.com/">
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="300" DisplayName="CV Screen Scope 'IHWindowClass'" sap:VirtualizedContainerService.HintSize="680,407" sap2010:WorkflowViewState.IdRef="CVScope_6" Server="https://cv.uipath.com/">
       <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_7">
-            <p:CVClickText DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="470, 565, 44, 9" DisplayName="CV Click Text - 'Vietnam'" FuzzySearch="True" sap2010:WorkflowViewState.IdRef="CVClickText_4" InformativeScreenshot="f2b693fe57d1e6ac81d528fe503c87f4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="Text" Text="Vietnam" TimeoutMS="30000">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,253" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <p:CVClickText DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="470, 565, 44, 9" DisplayName="CV Click Text - 'Vietnam'" FuzzySearch="True" sap:VirtualizedContainerService.HintSize="400,129" sap2010:WorkflowViewState.IdRef="CVClickText_4" InformativeScreenshot="f2b693fe57d1e6ac81d528fe503c87f4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="Text" Text="Vietnam" TimeoutMS="30000">
               <p:CVClickText.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -1290,27 +1327,32 @@
           <ActivityFunc.Argument>
             <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
           </ActivityFunc.Argument>
-          <ui:MicrosoftOCR FilterRegion="{x:Null}" Text="{x:Null}" ExtractWords="True" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_6" Image="[Image]" Language="en" Profile="Screen" Scale="1" />
+          <ui:MicrosoftOCR FilterRegion="{x:Null}" Text="{x:Null}" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_6" Image="[Image]" Language="en" Profile="Screen" Scale="1" />
         </ActivityFunc>
       </p:CVScope.OCREngine>
       <p:CVScope.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="59688844d9824b8c5307efcd85234c5b" Selector="&lt;wnd app='rdcman.exe' cls='WindowsForms10.Window.*' title='Windows10 - x86 (ROQAW10x86APP19.deskover.local) - Remote Deskto*' /&gt;&lt;wnd cls='IHWindowClass' idx='5' title='Input Capture Window' /&gt;" WaitForReady="INTERACTIVE" />
       </p:CVScope.Target>
     </p:CVScope>
-    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="300" DisplayName="CV Screen Scope 'IHWindowClass'" sap2010:WorkflowViewState.IdRef="CVScope_7" Server="https://cv.uipath.com/">
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="300" DisplayName="CV Screen Scope 'IHWindowClass'" sap:VirtualizedContainerService.HintSize="680,1021" sap2010:WorkflowViewState.IdRef="CVScope_7" Server="https://cv.uipath.com/">
       <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_8">
-            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(849, 531, 1005, 540)]" DesignTarget="[Rectangle.FromLTRB(828, 527, 844, 543)]" DisplayName="CV Click relative to Find CV Text - 'Create Shipto Same as Bilito'" sap2010:WorkflowViewState.IdRef="AnchorContextAware_9">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="688,867" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(849, 531, 1005, 540)]" DesignTarget="[Rectangle.FromLTRB(828, 527, 844, 543)]" DisplayName="CV Click relative to Find CV Text - 'Create Shipto Same as Bilito'" sap:VirtualizedContainerService.HintSize="666,221" sap2010:WorkflowViewState.IdRef="AnchorContextAware_9">
               <ui:AnchorContextAware.AnchorProvider>
                 <ActivityAction x:TypeArguments="ui:Anchor2Data">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="849, 531, 156, 9" DisplayName="Find CV Text - 'Create Shipto Same as Bilito'" FuzzySearch="True" sap2010:WorkflowViewState.IdRef="FindCVText_7" InformativeScreenshot="38b9e81f168616815c0a11bef1ed7f9d" TargetType="Text" Text="Create Shipto Same as Bilito" TimeoutMS="30000" />
+                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="849, 531, 156, 9" DisplayName="Find CV Text - 'Create Shipto Same as Bilito'" FuzzySearch="True" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="FindCVText_7" InformativeScreenshot="38b9e81f168616815c0a11bef1ed7f9d" TargetType="Text" Text="Create Shipto Same as Bilito" TimeoutMS="30000" />
                 </ActivityAction>
               </ui:AnchorContextAware.AnchorProvider>
               <ui:AnchorContextAware.TargetProvider>
@@ -1318,7 +1360,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:CVClick DelayBefore="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" Image="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="828, 527, 16, 16" DisplayName="CV Click - CheckBox" sap2010:WorkflowViewState.IdRef="CVClick_3" InformativeScreenshot="44537483c48f74fc2a83a0f86aa67baf" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="CheckBox" TimeoutMS="30000">
+                  <p:CVClick DelayBefore="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" Image="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="828, 527, 16, 16" DisplayName="CV Click - CheckBox" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="CVClick_3" InformativeScreenshot="44537483c48f74fc2a83a0f86aa67baf" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="CheckBox" TimeoutMS="30000">
                     <p:CVClick.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -1336,13 +1378,13 @@
                 </ActivityAction>
               </ui:AnchorContextAware.TargetProvider>
             </ui:AnchorContextAware>
-            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(1072, 398, 1116, 407)]" DesignTarget="[Rectangle.FromLTRB(1053, 393, 1069, 409)]" DisplayName="CV Click relative to Find CV Text - 'On Hold'" sap2010:WorkflowViewState.IdRef="AnchorContextAware_10">
+            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(1072, 398, 1116, 407)]" DesignTarget="[Rectangle.FromLTRB(1053, 393, 1069, 409)]" DisplayName="CV Click relative to Find CV Text - 'On Hold'" sap:VirtualizedContainerService.HintSize="666,221" sap2010:WorkflowViewState.IdRef="AnchorContextAware_10">
               <ui:AnchorContextAware.AnchorProvider>
                 <ActivityAction x:TypeArguments="ui:Anchor2Data">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="1072, 398, 44, 9" DisplayName="Find CV Text - 'On Hold'" FuzzySearch="True" sap2010:WorkflowViewState.IdRef="FindCVText_8" InformativeScreenshot="7f3c7dd6aef32686f14d3ce6af857c35" TargetType="Text" Text="On Hold" TimeoutMS="30000" />
+                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="1072, 398, 44, 9" DisplayName="Find CV Text - 'On Hold'" FuzzySearch="True" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="FindCVText_8" InformativeScreenshot="7f3c7dd6aef32686f14d3ce6af857c35" TargetType="Text" Text="On Hold" TimeoutMS="30000" />
                 </ActivityAction>
               </ui:AnchorContextAware.AnchorProvider>
               <ui:AnchorContextAware.TargetProvider>
@@ -1350,7 +1392,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:CVClick DelayBefore="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" Image="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="1053, 393, 16, 16" DisplayName="CV Click - CheckBox" sap2010:WorkflowViewState.IdRef="CVClick_4" InformativeScreenshot="9d2a51fe7df945165af0994087fe4152" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="CheckBox" TimeoutMS="30000">
+                  <p:CVClick DelayBefore="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" Image="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="1053, 393, 16, 16" DisplayName="CV Click - CheckBox" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="CVClick_4" InformativeScreenshot="9d2a51fe7df945165af0994087fe4152" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="CheckBox" TimeoutMS="30000">
                     <p:CVClick.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -1368,13 +1410,13 @@
                 </ActivityAction>
               </ui:AnchorContextAware.TargetProvider>
             </ui:AnchorContextAware>
-            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(1184, 531, 1204, 540)]" DesignTarget="[Rectangle.FromLTRB(1174, 522, 1221, 548)]" DisplayName="CV Click relative to Find CV Text - 'Add'" sap2010:WorkflowViewState.IdRef="AnchorContextAware_13">
+            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(1184, 531, 1204, 540)]" DesignTarget="[Rectangle.FromLTRB(1174, 522, 1221, 548)]" DisplayName="CV Click relative to Find CV Text - 'Add'" sap:VirtualizedContainerService.HintSize="666,221" sap2010:WorkflowViewState.IdRef="AnchorContextAware_13">
               <ui:AnchorContextAware.AnchorProvider>
                 <ActivityAction x:TypeArguments="ui:Anchor2Data">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="1184, 531, 20, 9" DisplayName="Find CV Text - 'Add'" FuzzySearch="True" sap2010:WorkflowViewState.IdRef="FindCVText_11" InformativeScreenshot="451f2da3e01b2178bde52eec3c791922" TargetType="Text" Text="Add" TimeoutMS="30000" />
+                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="1184, 531, 20, 9" DisplayName="Find CV Text - 'Add'" FuzzySearch="True" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="FindCVText_11" InformativeScreenshot="451f2da3e01b2178bde52eec3c791922" TargetType="Text" Text="Add" TimeoutMS="30000" />
                 </ActivityAction>
               </ui:AnchorContextAware.AnchorProvider>
               <ui:AnchorContextAware.TargetProvider>
@@ -1382,7 +1424,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:CVClick DelayBefore="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" Image="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="1174, 522, 47, 26" DisplayName="CV Click - Button" sap2010:WorkflowViewState.IdRef="CVClick_6" InformativeScreenshot="13007a27ecc345c3fc21b3e86b80c60b" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="Button" TimeoutMS="30000">
+                  <p:CVClick DelayBefore="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" Image="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="1174, 522, 47, 26" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="CVClick_6" InformativeScreenshot="13007a27ecc345c3fc21b3e86b80c60b" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="Button" TimeoutMS="30000">
                     <p:CVClick.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -1603,27 +1645,27 @@
           <ActivityFunc.Argument>
             <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
           </ActivityFunc.Argument>
-          <ui:MicrosoftOCR FilterRegion="{x:Null}" Text="{x:Null}" ExtractWords="True" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_7" Image="[Image]" Language="en" Profile="Screen" Scale="3" />
+          <ui:MicrosoftOCR FilterRegion="{x:Null}" Text="{x:Null}" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_7" Image="[Image]" Language="en" Profile="Screen" Scale="3" />
         </ActivityFunc>
       </p:CVScope.OCREngine>
       <p:CVScope.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="bbfec0bd41d14022f4028d211065e3fd" Selector="&lt;wnd app='rdcman.exe' cls='WindowsForms10.Window.*' title='Windows10 - x86 (ROQAW10x86APP19.deskover.local) - Remote Deskto*' /&gt;&lt;wnd cls='IHWindowClass' idx='5' title='Input Capture Window' /&gt;" WaitForReady="INTERACTIVE" />
       </p:CVScope.Target>
     </p:CVScope>
-    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="300" DisplayName="CV Screen Scope 'IHWindowClass'" sap2010:WorkflowViewState.IdRef="CVScope_8" Server="https://cv.uipath.com/">
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="300" DisplayName="CV Screen Scope 'IHWindowClass'" sap:VirtualizedContainerService.HintSize="680,929" sap2010:WorkflowViewState.IdRef="CVScope_8" Server="https://cv.uipath.com/">
       <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do">
-            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(700, 430, 745, 442)]" DesignTarget="[Rectangle.FromLTRB(765, 463, 927, 511)]" DisplayName="CV Get Text - Area relative to Find CV Text - 'Message'" sap2010:WorkflowViewState.IdRef="AnchorContextAware_14">
+          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(700, 430, 745, 442)]" DesignTarget="[Rectangle.FromLTRB(765, 463, 927, 511)]" DisplayName="CV Get Text - Area relative to Find CV Text - 'Message'" sap:VirtualizedContainerService.HintSize="666,221" sap2010:WorkflowViewState.IdRef="AnchorContextAware_14">
               <ui:AnchorContextAware.AnchorProvider>
                 <ActivityAction x:TypeArguments="ui:Anchor2Data">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="700, 430, 45, 12" DisplayName="Find CV Text - 'Message'" FuzzySearch="True" sap2010:WorkflowViewState.IdRef="FindCVText_12" InformativeScreenshot="cf4bc0cca0d3d3d2eb77407684fa1a79" TargetType="Text" Text="Message" TimeoutMS="30000" />
+                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="700, 430, 45, 12" DisplayName="Find CV Text - 'Message'" FuzzySearch="True" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="FindCVText_12" InformativeScreenshot="cf4bc0cca0d3d3d2eb77407684fa1a79" TargetType="Text" Text="Message" TimeoutMS="30000" />
                 </ActivityAction>
               </ui:AnchorContextAware.AnchorProvider>
               <ui:AnchorContextAware.TargetProvider>
@@ -1631,17 +1673,17 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:CVGetText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" Target="{x:Null}" Area="[Rectangle.FromLTRB(65, 33, 227, 81)]" DesignTimeRectangle="765, 463, 162, 48" DesignTimeScaleFactor="1" DisplayName="CV Get Text - Area" sap2010:WorkflowViewState.IdRef="CVGetText_2" InformativeScreenshot="9f03288ce54e308b0ab077a4be8e77b2" Result="[message]" TargetType="Area" TimeoutMS="30000" />
+                  <p:CVGetText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" Target="{x:Null}" Area="[Rectangle.FromLTRB(65, 33, 227, 81)]" DesignTimeRectangle="765, 463, 162, 48" DesignTimeScaleFactor="1" DisplayName="CV Get Text - Area" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="CVGetText_2" InformativeScreenshot="9f03288ce54e308b0ab077a4be8e77b2" Result="[message]" TargetType="Area" TimeoutMS="30000" />
                 </ActivityAction>
               </ui:AnchorContextAware.TargetProvider>
             </ui:AnchorContextAware>
-            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(700, 430, 745, 442)]" DesignTarget="[Rectangle.FromLTRB(901, 524, 945, 550)]" DisplayName="CV Click relative to Find CV Text - 'Message'" sap2010:WorkflowViewState.IdRef="AnchorContextAware_15">
+            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(700, 430, 745, 442)]" DesignTarget="[Rectangle.FromLTRB(901, 524, 945, 550)]" DisplayName="CV Click relative to Find CV Text - 'Message'" sap:VirtualizedContainerService.HintSize="666,221" sap2010:WorkflowViewState.IdRef="AnchorContextAware_15">
               <ui:AnchorContextAware.AnchorProvider>
                 <ActivityAction x:TypeArguments="ui:Anchor2Data">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="700, 430, 45, 12" DisplayName="Find CV Text - 'Message'" FuzzySearch="True" sap2010:WorkflowViewState.IdRef="FindCVText_13" InformativeScreenshot="cf4bc0cca0d3d3d2eb77407684fa1a79" TargetType="Text" Text="Message" TimeoutMS="30000" />
+                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="700, 430, 45, 12" DisplayName="Find CV Text - 'Message'" FuzzySearch="True" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="FindCVText_13" InformativeScreenshot="cf4bc0cca0d3d3d2eb77407684fa1a79" TargetType="Text" Text="Message" TimeoutMS="30000" />
                 </ActivityAction>
               </ui:AnchorContextAware.AnchorProvider>
               <ui:AnchorContextAware.TargetProvider>
@@ -1649,7 +1691,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
                   </ActivityAction.Argument>
-                  <p:CVClick DelayBefore="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" Image="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="901, 524, 44, 26" DisplayName="CV Click - Button" sap2010:WorkflowViewState.IdRef="CVClick_7" InformativeScreenshot="236788373e07e0f7e7d3e739b30c3542" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="Button" TimeoutMS="30000">
+                  <p:CVClick DelayBefore="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" Image="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="901, 524, 44, 26" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="314,129" sap2010:WorkflowViewState.IdRef="CVClick_7" InformativeScreenshot="236788373e07e0f7e7d3e739b30c3542" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="Button" TimeoutMS="30000">
                     <p:CVClick.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -1667,7 +1709,7 @@
                 </ActivityAction>
               </ui:AnchorContextAware.TargetProvider>
             </ui:AnchorContextAware>
-            <p:CVClick DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="650, 29, 20, 20" DesignTimeScaleFactor="1" DisplayName="CV Click - Icon" sap2010:WorkflowViewState.IdRef="CVClick_8" InformativeScreenshot="2c77c8d3e95bd0a433678723ab6402eb" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="Icon" TimeoutMS="30000">
+            <p:CVClick DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="650, 29, 20, 20" DesignTimeScaleFactor="1" DisplayName="CV Click - Icon" sap:VirtualizedContainerService.HintSize="666,129" sap2010:WorkflowViewState.IdRef="CVClick_8" InformativeScreenshot="2c77c8d3e95bd0a433678723ab6402eb" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="Icon" TimeoutMS="30000">
               <p:CVClick.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -1868,137 +1910,13 @@
           <ActivityFunc.Argument>
             <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
           </ActivityFunc.Argument>
-          <ui:MicrosoftOCR FilterRegion="{x:Null}" Text="{x:Null}" ExtractWords="True" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_8" Image="[Image]" Language="en" Profile="Screen" Scale="1" />
+          <ui:MicrosoftOCR FilterRegion="{x:Null}" Text="{x:Null}" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_8" Image="[Image]" Language="en" Profile="Screen" Scale="1" />
         </ActivityFunc>
       </p:CVScope.OCREngine>
       <p:CVScope.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="712ed372054d42a812bfba1d51459f03" Selector="&lt;wnd app='rdcman.exe' cls='WindowsForms10.Window.*' title='Windows10 - x86 (ROQAW10x86APP19.deskover.local) - Remote Deskto*' /&gt;&lt;wnd cls='IHWindowClass' idx='5' title='Input Capture Window' /&gt;" WaitForReady="INTERACTIVE" />
       </p:CVScope.Target>
     </p:CVScope>
-    <ui:LogMessage DisplayName="Log Message" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn" Message="[message]" />
-    <sads:DebugSymbol.Symbol>d0BDOlxVc2Vyc1xhbGV4YW5kcnUucm9tYW5cRG9jdW1lbnRzXFVpUGF0aFxydW5DVlxuZXdDdXN0b21lci54YW1s2QFOA9gODgIBAU8F3AERAwHOAd0BBeECEQMBwAHiAgWNBBEDAasBjgQF5wURAwGZAegFBbMIEQIBWrQIBZMKEQIBTJQKBcwMEQIBJ80MBdUOEQIBBdYOBdYOgAECAQLaAZgB2gHmAgMB5QFPngFPtgEDAeQBTzdPPAMB4wHWAQvWAcQBAwHeAVULigEWAwHPAd8CmAHfAuYCAwHNAd0BngHdAbYBAwHMAd0BN90BPAMBywHbAgvbAsQBAwHGAeMBC/MBFgMBwQGLBJgBiwTmAgMBvwHiAp4B4gK2AQMBvgHiAjfiAjwDAb0BhwQLhwTEAQMBuAHoAguJAxYDAawB5QWYAeUF5gIDAaoBjgSeAY4EtgEDAakBjgQ3jgQ8AwGoAeEFC+EFxAEDAaMBlAQLuQQWAwGaAbEImAGxCOYCAwGYAegFngHoBbYBAwGXAegFN+gFPAMBlgGtCAutCMQBAwGRAe4FC+QGFgIBW5EKmAGRCuYCAgFZtAieAbQItgECAVi0CDe0CDwCAVeNCguNCsQBAgFSuggLyggWAgFNygyYAcoM5gICAUuUCp4BlAq2AQIBSpQKN5QKPAIBScYMC8YMxAECAUSaCgv7ChYCASjTDpgB0w7mAgIBJs0MngHNDLYBAgElzQw3zQw8AgEkzw4Lzw7EAQIBH9MMC5gNFgIBBtYOctYOfQIBA9YBvgHWAcEBAwHiAdYBjwHWAZgBAwHgAdYBogHWAaYBAwHfAVYNeSUDAdYBeg16VAMB1AF7DYkBHQMB0AHbAr4B2wLBAQMBygHbAo8B2wKYAQMByAHbAqIB2wKmAQMBxwHkAQ3yAR0DAcIBhwS+AYcEwQEDAbwBhwSPAYcEmAEDAboBhwSiAYcEpgEDAbkB6QINiAMlAwGtAeEFvgHhBcEBAwGnAeEFjwHhBZgBAwGlAeEFogHhBaYBAwGkAZUEDbgEJQMBmwGtCL4BrQjBAQMBlQGtCI8BrQiYAQMBkwGtCKIBrQimAQMBkgHvBQ2EBiUDAYcBhQYNmgYlAgF9mwYNsAYlAgFzsQYNwgYlAgFowwYNwwaJAQIBZcQGDeMGJQIBXI0KvgGNCsEBAgFWjQqPAY0KmAECAVSNCqIBjQqmAQIBU7sIDckIHQIBTsYMvgHGDMEBAgFIxgyPAcYMmAECAUbGDKIBxgymAQIBRZsKDboKJQIBO7sKDdoKJQIBMtsKDfoKJQIBKc8OvgHPDsEBAgEjzw6PAc8OmAECASHPDqIBzw6mAQIBINQMDeUMJQIBE+YMDYUNJQIBCoYNDZcNGQIBB1YxVlkDAd0BVmdWjwEDAdwBXBNgJQMB2QFoE3YfAwHXAXodeicDAdUBe9cDe94DAwHTAXvDA3vMAwMB0gF74AF75gEDAdEB5AHjA+QB6gMDAcUB5AHJA+QB2AMDAcQB5AHmAeQB7AEDAcMB6QIx6QJZAwG3AekCZ+kCjwEDAbYB7wIT7wLIAwMBsgH3AhOFAyMDAa4BlQQxlQRbAwGiAZUEaZUEkwEDAaEBmwQTnwQlAwGeAacEE7UEHwMBnAHvBTHvBVsDAZAB7wVp7wWTAQMBjwH1BRP1BcADAwGLAf0FE4EGIgMBiAGFBjGFBl0DAYYBhQZrhQaXAQMBhQGLBhOLBsUDAwGBAZMGE5cGIgIBfpsGMZsGWwIBfJsGaZsGkwECAXuhBhOhBsEDAgF3qQYTrQYiAgF0sQYxsQZbAgFysQZpsQaTAQIBcbcGE7cGyAMCAW2/BhO/BsIDAgFpwwZ6wwaGAQIBZsQGMcQGWwIBZMQGacQGkwECAWPKBhPKBscDAgFf0gYT4AYfAgFduwjZA7sI4AMCAVG7CMUDuwjOAwIBULsI4gG7COgBAgFPmwoxmwpcAgFDmwpqmwqUAQIBQqEKE6EK8QMCAT6pChO3Ch8CATy7CjG7Cl0CATq7Cmu7CpcBAgE5wQoTwQrHAwIBNckKE9cKHwIBM9sKMdsKXQIBMdsKa9sKlwECATDhChPhCsADAgEs6QoT9wofAgEq1Awx1AxbAgEe1Axp1AyTAQIBHdoME9oMyAMCARniDBPiDNADAgEU5gwx5gxbAgES5gxp5gyTAQIBEewME+wMyAMCAQ30DBOCDR8CAQuGDb8Dhg3GAwIBCZINO5INQAIBCFyQA1yXAwMB2wFeQV5GAwHaAWjhA2joAwMB2AHvAr4D7wLFAwMBtQHvAqkD7wKzAwMBtAHvAqMC7wKpAgMBswH3AvkD9wKABAMBsQH3AtgD9wLuAwMBsAH3AvUB9wL7AQMBrwGbBJEDmwSYAwMBoAGdBEGdBEYDAZ8BpwTiA6cE6QMDAZ0B9QW2A/UFvQMDAY4B9QWlA/UFqwMDAY0B9QWfAvUFpQIDAYwB/QWPBP0FlgQDAYoB/QX/A/0FhAQDAYkBiwa7A4sGwgMDAYQBiwaoA4sGsAMDAYMBiwaiAosGqAIDAYIBkwaRBJMGmAQDAYABkwaABJMGhgQCAX+hBrcDoQa+AwIBeqEGpgOhBqwDAgF5oQagAqEGpgICAXipBpUEqQacBAIBdqkG/wOpBooEAgF1twa+A7cGxQMCAXC3BqkDtwazAwIBb7cGowK3BqkCAgFuvwa4A78GvwMCAWy/BosDvwaXAwIBasoGvQPKBsQDAgFiygapA8oGsgMCAWHKBqMCygapAgIBYNIG5wPSBu4DAgFeoQrnA6EK7gMCAUGhCr4DoQrcAwIBQKEKuAKhCr4CAgE/qQrmA6kK7QMCAT3BCr0DwQrEAwIBOMEKqQPBCrIDAgE3wQqjAsEKqQICATbJCucDyQruAwIBNOEKtgPhCr0DAgEv4QqmA+EKqwMCAS7hCp8C4QqlAgIBLekK4wPpCuoDAgEr2gy+A9oMxQMCARzaDKoD2gyzAwIBG9oMowLaDKkCAgEa4gylAeIMzAECARjiDMYD4gzNAwIBF+IMngPiDKkDAgEV7Ay+A+wMxQMCARDsDKoD7AyzAwIBD+wMowLsDKkCAgEO9AziA/QM6QMCAQw=</sads:DebugSymbol.Symbol>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="680,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn" Message="[message]" />
   </Sequence>
-  <sap2010:WorkflowViewState.ViewStateManager>
-    <sap2010:ViewStateManager>
-      <sap2010:ViewStateData Id="FindCVElement_2" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="CVClick_9" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="AnchorContextAware_16" sap:VirtualizedContainerService.HintSize="666,221" />
-      <sap2010:ViewStateData Id="Delay_1" sap:VirtualizedContainerService.HintSize="666,22" />
-      <sap2010:ViewStateData Id="CVClickText_1" sap:VirtualizedContainerService.HintSize="666,129" />
-      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="688,576">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="MicrosoftOCR_1" sap:VirtualizedContainerService.HintSize="200,22" />
-      <sap2010:ViewStateData Id="CVScope_1" sap:VirtualizedContainerService.HintSize="680,730" />
-      <sap2010:ViewStateData Id="CVClickText_2" sap:VirtualizedContainerService.HintSize="400,129" />
-      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="336,253">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="MicrosoftOCR_2" sap:VirtualizedContainerService.HintSize="200,22" />
-      <sap2010:ViewStateData Id="CVScope_2" sap:VirtualizedContainerService.HintSize="680,407" />
-      <sap2010:ViewStateData Id="FindCVText_1" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="CVClickText_3" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="AnchorContextAware_1" sap:VirtualizedContainerService.HintSize="666,221" />
-      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="688,345">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="MicrosoftOCR_3" sap:VirtualizedContainerService.HintSize="200,22" />
-      <sap2010:ViewStateData Id="CVScope_3" sap:VirtualizedContainerService.HintSize="680,499" />
-      <sap2010:ViewStateData Id="FindCVElement_1" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="CVClick_1" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="AnchorContextAware_2" sap:VirtualizedContainerService.HintSize="666,221" />
-      <sap2010:ViewStateData Id="Sequence_5" sap:VirtualizedContainerService.HintSize="688,345">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="MicrosoftOCR_5" sap:VirtualizedContainerService.HintSize="200,22" />
-      <sap2010:ViewStateData Id="CVScope_5" sap:VirtualizedContainerService.HintSize="680,499" />
-      <sap2010:ViewStateData Id="FindCVText_2" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="CVTypeInto_1" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="AnchorContextAware_17" sap:VirtualizedContainerService.HintSize="666,221" />
-      <sap2010:ViewStateData Id="FindCVText_3" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="CVTypeInto_2" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="AnchorContextAware_5" sap:VirtualizedContainerService.HintSize="666,221" />
-      <sap2010:ViewStateData Id="FindCVText_4" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="CVTypeInto_3" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="AnchorContextAware_6" sap:VirtualizedContainerService.HintSize="666,221" />
-      <sap2010:ViewStateData Id="FindCVText_5" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="CVGetText_1" sap:VirtualizedContainerService.HintSize="314,106" />
-      <sap2010:ViewStateData Id="AnchorContextAware_7" sap:VirtualizedContainerService.HintSize="666,221" />
-      <sap2010:ViewStateData Id="LogMessage_1" sap:VirtualizedContainerService.HintSize="666,91" />
-      <sap2010:ViewStateData Id="FindCVText_6" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="CVClick_2" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="AnchorContextAware_8" sap:VirtualizedContainerService.HintSize="666,221" />
-      <sap2010:ViewStateData Id="Sequence_6" sap:VirtualizedContainerService.HintSize="688,1781">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="MicrosoftOCR_4" sap:VirtualizedContainerService.HintSize="200,22" />
-      <sap2010:ViewStateData Id="CVScope_4" sap:VirtualizedContainerService.HintSize="680,1674" />
-      <sap2010:ViewStateData Id="CVClickText_4" sap:VirtualizedContainerService.HintSize="400,129" />
-      <sap2010:ViewStateData Id="Sequence_7" sap:VirtualizedContainerService.HintSize="336,253">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="MicrosoftOCR_6" sap:VirtualizedContainerService.HintSize="200,22" />
-      <sap2010:ViewStateData Id="CVScope_6" sap:VirtualizedContainerService.HintSize="680,407" />
-      <sap2010:ViewStateData Id="FindCVText_7" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="CVClick_3" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="AnchorContextAware_9" sap:VirtualizedContainerService.HintSize="666,221" />
-      <sap2010:ViewStateData Id="FindCVText_8" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="CVClick_4" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="AnchorContextAware_10" sap:VirtualizedContainerService.HintSize="666,221" />
-      <sap2010:ViewStateData Id="FindCVText_11" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="CVClick_6" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="AnchorContextAware_13" sap:VirtualizedContainerService.HintSize="666,221" />
-      <sap2010:ViewStateData Id="Sequence_8" sap:VirtualizedContainerService.HintSize="688,867">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="MicrosoftOCR_7" sap:VirtualizedContainerService.HintSize="200,22" />
-      <sap2010:ViewStateData Id="CVScope_7" sap:VirtualizedContainerService.HintSize="680,1021" />
-      <sap2010:ViewStateData Id="FindCVText_12" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="CVGetText_2" sap:VirtualizedContainerService.HintSize="314,106" />
-      <sap2010:ViewStateData Id="AnchorContextAware_14" sap:VirtualizedContainerService.HintSize="666,221" />
-      <sap2010:ViewStateData Id="FindCVText_13" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="CVClick_7" sap:VirtualizedContainerService.HintSize="314,129" />
-      <sap2010:ViewStateData Id="AnchorContextAware_15" sap:VirtualizedContainerService.HintSize="666,221" />
-      <sap2010:ViewStateData Id="CVClick_8" sap:VirtualizedContainerService.HintSize="666,129" />
-      <sap2010:ViewStateData Id="MicrosoftOCR_8" sap:VirtualizedContainerService.HintSize="200,22" />
-      <sap2010:ViewStateData Id="CVScope_8" sap:VirtualizedContainerService.HintSize="680,929" />
-      <sap2010:ViewStateData Id="LogMessage_2" sap:VirtualizedContainerService.HintSize="680,91" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="702,6701">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="newCustomer_1" sap:VirtualizedContainerService.HintSize="742,6781" />
-    </sap2010:ViewStateManager>
-  </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
